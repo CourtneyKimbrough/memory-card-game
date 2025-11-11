@@ -4,7 +4,7 @@ Try it live: [pokemon-memory-card-game-ck.netlify.app](https://pokemon-memory-ca
 
 ![Screenshot of Pokémon Matching Game](./public/screenshot.png)
 
-A memory card game built with React, Vite, and Tailwind CSS. Test your memory by clicking on Pokémon cards—try not to click the same Pokémon twice!
+A memory card game built with React, Vite, and Tailwind CSS. Test your memory by clicking on Pokémon cards. Try not to click the same Pokémon twice!
 
 ## Features
 - 10 random Pokémon cards per round
