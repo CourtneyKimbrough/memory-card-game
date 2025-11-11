@@ -1,11 +1,12 @@
 import { useState } from 'react'
 import './App.css'
-import Board from './components/MyGrid'
+import MyGrid from './components/MyGrid'
 import pokemonLogo from './assets/Pokemon-logo.png';
 
 function App() {
   const [score, setScore] = useState(0)
   const [modal, setModal] = useState(false)
+  const [shouldReset, setShouldReset] = useState(false)
 
   function increaseScore() {
     setScore(prev => prev + 1);
@@ -22,6 +23,7 @@ function App() {
               onClick={() => {
                 setModal(false);
                 setScore(0);
+                setShouldReset(true);
               }}
               style={{ background: '#3b4cca', color: 'white' }}
               className="mt-4 px-4 py-2 text-white rounded"
@@ -38,7 +40,12 @@ function App() {
           <h3 style={{ fontFamily: '"Lato", sans-serif' }}>Get points by clicking images but don't click an image more than once!</h3>
         </div>
         <div className="flex-1 flex items-center justify-center w-2/3 mx-auto max-h-full overflow-auto">
-          < Board increaseScore={increaseScore} setScore={setScore} setModal={setModal}/>
+          < MyGrid 
+          increaseScore={increaseScore} 
+          setScore={setScore} 
+          setModal={setModal} 
+          shouldReset={shouldReset} 
+          setShouldReset={setShouldReset}/>
         </div>
         <div className="flex-1 flex items-center justify-center mx-auto text-xl" style={{ fontFamily: '"Lato", sans-serif' }}>Current Score: {score}</div>
       </div>
