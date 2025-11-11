@@ -1,4 +1,4 @@
-# Pokémon Matching Game
+# Pokémon Memory Game
 
 Try it live: [pokemon-memory-card-game-ck.netlify.app](https://pokemon-memory-card-game-ck.netlify.app/)
 
@@ -54,4 +54,4 @@ Then open [http://localhost:5173](http://localhost:5173) in your browser.
 - Pokémon logo and branding © Nintendo, Game Freak, and The Pokémon Company
 
 ---
-Enjoy playing and improving your memory with the Pokémon Matching Game!
+Enjoy playing and improving your memory with the Pokémon Memory Game!
