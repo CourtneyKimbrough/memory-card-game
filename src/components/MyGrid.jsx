@@ -49,8 +49,6 @@ export default function MyGrid({ increaseScore, setModal, shouldReset, setShould
         const board = [...all, ...clicked]
         const newboard = shuffle(board)
         setSpecies(newboard);
-        console.log('Shuffled board:', newboard);
-        console.log('Effect ran');
     }, [clickedSpecies, allSpecies])
 
 
@@ -58,7 +56,6 @@ export default function MyGrid({ increaseScore, setModal, shouldReset, setShould
         if (clickedSpecies.includes(id)) {
             setModal(1)
         } else {
-            console.log("test")
             const remaining = allSpecies.filter(s => s !== id)
             setAllSpecies(remaining)
             setClickedSpecies((prev) => [...prev, id]);
@@ -75,7 +72,7 @@ export default function MyGrid({ increaseScore, setModal, shouldReset, setShould
                             <Card key={id} onClick={() => handleCardClick(id)} imgSrc={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${id}.png`}></Card>
                         );
                     })
-                    : "Loading"}
+                    : <div className="flex justify-center items-center w-full h-[300px] col-span-5 row-span-2"><div className="poke-spinner"></div></div>}
             </div>
         </>
     )

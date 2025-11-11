@@ -1,16 +1,57 @@
-# React + Vite
+# Pokémon Matching Game
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Try it live: [pokemon-memory-card-game-ck.netlify.app](https://pokemon-memory-card-game-ck.netlify.app/)
 
-Currently, two official plugins are available:
+![Screenshot of Pokémon Matching Game](./public/screenshot.png)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+A memory card game built with React, Vite, and Tailwind CSS. Test your memory by clicking on Pokémon cards—try not to click the same Pokémon twice!
 
-## React Compiler
+## Features
+- 10 random Pokémon cards per round
+- Score tracking and reset on duplicate click
+- Game over modal with your score
+- Responsive, modern UI with Tailwind CSS
+- Images and data fetched from the PokéAPI
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## How to Play
+1. Click on a Pokémon card to earn a point.
+2. Don't click the same Pokémon twice in a round!
+3. If you click a duplicate, the game ends and your score is shown.
+4. Click "Close" on the modal to start a new round.
 
-## Expanding the ESLint configuration
+## Getting Started
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### Prerequisites
+- Node.js (v16 or higher recommended)
+- npm
+
+### Installation
+```bash
+npm install
+```
+
+### Running the App
+```bash
+npm run dev
+```
+Then open [http://localhost:5173](http://localhost:5173) in your browser.
+
+## Project Structure
+- `src/` — React components and styles
+- `public/` — Static assets
+- `App.jsx` — Main app logic and modal
+- `components/MyGrid.jsx` — Board and game logic
+- `components/Card.jsx` — Card display
+
+## Technologies Used
+- [React](https://react.dev/)
+- [Vite](https://vitejs.dev/)
+- [Tailwind CSS](https://tailwindcss.com/)
+- [PokéAPI](https://pokeapi.co/)
+
+## Credits
+- Pokémon images and data from [PokéAPI](https://pokeapi.co/)
+- Pokémon logo and branding © Nintendo, Game Freak, and The Pokémon Company
+
+---
+Enjoy playing and improving your memory with the Pokémon Matching Game!
