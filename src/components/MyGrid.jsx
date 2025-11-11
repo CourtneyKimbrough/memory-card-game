@@ -11,7 +11,6 @@ export default function MyGrid({ increaseScore, setScore, setModal }) {
     }, []);
 
     async function resetGame() {
-        setModal(1)
         const response = await fetch('https://pokeapi.co/api/v2/pokemon-species/?limit=1010');
         const data = await response.json();
         const ids = data.results.map(item => {
@@ -37,6 +36,7 @@ export default function MyGrid({ increaseScore, setScore, setModal }) {
 
     function handleCardClick(id) {
         if (clickedSpecies.includes(id)) {
+            setModal(1)
             resetGame()
         } else {
             const remaining = allSpecies.filter(s => s !== id)
